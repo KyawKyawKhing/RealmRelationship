@@ -1,24 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oK5-Ge-47d">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Realm Relation-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmRelationship" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1qw-zK-LpT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PostsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostsTableViewCell" id="E8M-lJ-7iT" customClass="PostsTableViewCell" customModule="RealmRelationship" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E8M-lJ-7iT" id="iUQ-PJ-3Nc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMw-B2-SXx">
+                                                    <rect key="frame" x="14" y="8" width="386" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WMw-B2-SXx" firstAttribute="leading" secondItem="iUQ-PJ-3Nc" secondAttribute="leading" constant="14" id="LVb-sh-QvT"/>
+                                                <constraint firstAttribute="trailing" secondItem="WMw-B2-SXx" secondAttribute="trailing" constant="14" id="Vqf-fi-Jbl"/>
+                                                <constraint firstAttribute="bottom" secondItem="WMw-B2-SXx" secondAttribute="bottom" constant="8" id="eOD-xW-i5n"/>
+                                                <constraint firstItem="WMw-B2-SXx" firstAttribute="top" secondItem="iUQ-PJ-3Nc" secondAttribute="top" constant="8" id="rtq-bM-mDz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblDetail" destination="WMw-B2-SXx" id="Ewe-0u-UFr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1qw-zK-LpT" secondAttribute="bottom" id="gri-AP-VGD"/>
+                            <constraint firstItem="1qw-zK-LpT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="myH-pQ-XkO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1qw-zK-LpT" secondAttribute="trailing" id="oaW-gD-5hE"/>
+                            <constraint firstItem="1qw-zK-LpT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vfs-dt-6mD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Realm Relation" id="y7w-UC-3Mi">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rY9-77-veF">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onClickCancelButton:" destination="BYZ-38-t0r" id="e9T-mj-1Zi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tvPosts" destination="1qw-zK-LpT" id="G3b-So-64C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="904" y="783"/>
+        </scene>
+        <!--Add Post View Controller-->
+        <scene sceneID="yB2-Mn-6e0">
+            <objects>
+                <viewController id="oK5-Ge-47d" customClass="AddPostViewController" customModule="RealmRelationship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GJO-Y9-Yvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xm3-7q-hlw">
+                                <rect key="frame" x="107" y="428" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.52412980789999997" green="0.70721429589999996" blue="0.25085270399999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="FaO-li-I01"/>
+                                    <constraint firstAttribute="height" constant="40" id="wBD-2f-XER"/>
+                                </constraints>
+                                <state key="normal" title="Show">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sXj-6V-Nrq" kind="show" id="kFr-XS-941"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realm One to One Relationship &amp; One to Many Relationship" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbz-TI-lNI">
+                                <rect key="frame" x="40" y="144" width="334" height="244"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="28"/>
+                                <color key="textColor" red="0.52412980789999997" green="0.70721429589999996" blue="0.25085270399999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hbz-TI-lNI" firstAttribute="leading" secondItem="rIf-SK-eLU" secondAttribute="leading" constant="40" id="0ye-aw-Gp1"/>
+                            <constraint firstItem="Xm3-7q-hlw" firstAttribute="centerY" secondItem="GJO-Y9-Yvc" secondAttribute="centerY" id="MLq-Pn-Vat"/>
+                            <constraint firstItem="Hbz-TI-lNI" firstAttribute="top" secondItem="rIf-SK-eLU" secondAttribute="top" constant="100" id="Qb4-R3-h0K"/>
+                            <constraint firstItem="Xm3-7q-hlw" firstAttribute="top" secondItem="Hbz-TI-lNI" secondAttribute="bottom" constant="40" id="V1V-C6-JIe"/>
+                            <constraint firstAttribute="trailing" secondItem="Hbz-TI-lNI" secondAttribute="trailing" constant="40" id="wSj-us-obb"/>
+                            <constraint firstItem="Xm3-7q-hlw" firstAttribute="centerX" secondItem="GJO-Y9-Yvc" secondAttribute="centerX" id="weY-5U-rfX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rIf-SK-eLU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nw-FZ-hzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775.36231884057975" y="782.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="icK-0P-DGl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sXj-6V-Nrq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YIE-1y-pi6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.52412980789999997" green="0.70721429589999996" blue="0.25085270399999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BEZ-8I-m8s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cX-1U-DKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="782.8125"/>
         </scene>
     </scenes>
 </document>

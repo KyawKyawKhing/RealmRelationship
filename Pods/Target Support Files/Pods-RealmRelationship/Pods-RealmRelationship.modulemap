@@ -1,0 +1,6 @@
+framework module Pods_RealmRelationship {
+  umbrella header "Pods-RealmRelationship-umbrella.h"
+
+  export *
+  module * { export * }
+}
